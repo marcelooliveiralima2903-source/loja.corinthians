@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Timão Store | Corinthians</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            🖤 <span>TIMÃO</span> STORE
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+
+        <button class="btn-carrinho" onclick="abrirCarrinho()">
+            🛒 Carrinho
+            <b id="contador">0</b>
+        </button>
+
+    </header>
+
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-text">
+
+            <p>VAI CORINTHIANS!</p>
+
+            <h1>
+                Vista o manto<br>
+                do <span>Timão.</span>
+            </h1>
+
+            <p class="descricao">
+                Produtos para quem carrega o Corinthians
+                no coração.
+            </p>
+
+            <a href="#produtos" class="btn">
+                Ver produtos
+            </a>
+
+        </div>
+
+        <div class="escudo">
+            ⚽
+        </div>
+
+    </section>
+
+
+    <section class="produtos-section" id="produtos">
+
+        <div class="titulo">
+
+            <p>NOSSA COLEÇÃO</p>
+
+            <h2>
+                Produtos do Timão
+            </h2>
+
+        </div>
+
+
+        <div class="filtros">
+
+            <button onclick="filtrar('todos')">
+                Todos
+            </button>
+
+            <button onclick="filtrar('camisas')">
+                Camisas
+            </button>
+
+            <button onclick="filtrar('acessorios')">
+                Acessórios
+            </button>
+
+            <button onclick="filtrar('casa')">
+                Casa
+            </button>
+
+        </div>
+
+
+        <div class="produtos">
+
+
+            <!-- PRODUTO 1 -->
+
+            <div class="produto" data-categoria="camisas">
+
+                <div class="imagem-produto camisa">
+                    👕
+                </div>
+
+                <div class="info">
+
+                    <small>CAMISAS</small>
+
+                    <h3>
+                        Camisa Alvinegra
+                    </h3>
+
+                    <p>
+                        Camisa preta e branca do Timão.
+                    </p>
+
+                    <strong>
+                        R$ 299,90
+                    </strong>
+
+                    <button onclick="adicionar(
+                        'Camisa Alvinegra',
+                        299.90
+                    )">
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 2 -->
+
+            <div class="produto" data-categoria="camisas">
+
+                <div class="imagem-produto">
+                    🖤
+                </div>
+
+                <div class="info">
+
+                    <small>CAMISAS</small>
+
+                    <h3>
+                        Camisa Preta
+                    </h3>
+
+                    <p>
+                        Modelo especial para os torcedores.
+                    </p>
+
+                    <strong>
+                        R$ 279,90
+                    </strong>
+
+                    <button onclick="adicionar(
+                        'Camisa Preta',
+                        279.90
+                    )">
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 3 -->
+
+            <div class="produto" data-categoria="acessorios">
+
+                <div class="imagem-produto">
+                    🧢
+                </div>
+
+                <div class="info">
+
+                    <small>ACESSÓRIOS</small>
+
+                    <h3>
+                        Boné do Timão
+                    </h3>
+
+                    <p>
+                        Boné preto com detalhes alvinegros.
+                    </p>
+
+                    <strong>
+                        R$ 89,90
+                    </strong>
+
+                    <button onclick="adicionar(
+                        'Boné do Timão',
+                        89.90
+                    )">
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 4 -->
+
+            <div class="produto" data-categoria="acessorios">
+
+                <div class="imagem-produto">
+                    🧣
+                </div>
+
+                <div class="info">
+
+                    <small>ACESSÓRIOS</small>
+
+                    <h3>
+                        Cachecol Corinthians
+                    </h3>
+
+                    <p>
+                        Cachecol preto e branco para a torcida.
+                    </p>
+
+                    <strong>
+                        R$ 79,90
+                    </strong>
+
+                    <button onclick="adicionar(
+                        'Cachecol Corinthians',
+                        79.90
+                    )">
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 5 -->
+
+            <div class="produto" data-categoria="casa">
+
+                <div class="imagem-produto">
+                    ☕
+                </div>
+
+                <div class="info">
+
+                    <small>CASA</small>
+
+                    <h3>
+                        Caneca do Timão
+                    </h3>
+
+                    <p>
+                        Caneca personalizada nas cores do Corinthians.
+                    </p>
+
+                    <strong>
+                        R$ 49,90
+                    </strong>
+
+                    <button onclick="adicionar(
+                        'Caneca do Timão',
+                        49.90
+                    )">
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 6 -->
+
+            <div class="produto" data-categoria="casa">
+
+                <div class="imagem-produto">
+                    🏳️
+                </div>
+
+                <div class="info">
+
+                    <small>CASA</small>
+
+                    <h3>
+                        Bandeira do Corinthians
+                    </h3>
+
+                    <p>
+                        Bandeira alvinegra para decorar sua casa.
+                    </p>
+
+                    <strong>
+                        R$ 59,90
+                    </strong>
+
+                    <button onclick="adicionar(
+                        'Bandeira do Corinthians',
+                        59.90
+                    )">
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section class="sobre" id="sobre">
+
+        <div>
+
+            <p>FIEL TORCIDA</p>
+
+            <h2>
+                Aqui é Corinthians!
+            </h2>
+
+            <p>
+                Uma loja fictícia criada para demonstrar
+                uma experiência de e-commerce dedicada
+                aos torcedores do Timão.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            🖤
+
+            <h3>
+                Paixão
+            </h3>
+
+            <p>
+                Produtos para levar o Timão com você.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            ⚽
+
+            <h3>
+                Futebol
+            </h3>
+
+            <p>
+                A paixão pelo Corinthians em cada detalhe.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div class="logo">
+            🖤 TIMÃO STORE
+        </div>
+
+        <p>
+            © 2026 Timão Store — Projeto demonstrativo
+        </p>
+
+    </footer>
+
+
+    <!-- CARRINHO -->
+
+    <div id="modal" class="modal">
+
+        <div class="carrinho">
+
+            <button
+                class="fechar"
+                onclick="fecharCarrinho()">
+                ✕
+            </button>
+
+            <h2>
+                🛒 Meu carrinho
+            </h2>
+
+            <div id="itens">
+
+                <p class="vazio">
+                    Seu carrinho está vazio.
+                </p>
+
+            </div>
+
+            <div class="total">
+
+                <span>Total</span>
+
+                <strong id="total">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+            <button
+                class="finalizar"
+                onclick="finalizar()">
+
+                Finalizar pedido
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
